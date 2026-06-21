@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <!-- Font Awesome 6 (Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="player">
+        <!-- HEADER -->
+        <div class="player-header">
+            <h2><i class="fas fa-headphones-alt"></i>MUSIC PLAYER</h2>
+            <div class="header-actions">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+        </div>
+
+        <!-- COVER -->
+        <div class="cover-wrapper">
+            <img id="coverArt" src="https://picsum.photos/seed/music/400/400" alt="album cover" />
+        </div>
+
+        <!-- TRACK INFO -->
+        <div class="track-info">
+            <h3 id="trackTitle">Midnight Waves</h3>
+            <p id="trackArtist">Luna Echo</p>
+        </div>
+
+        <!-- PROGRESS -->
+        <div class="progress-area">
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+            </div>
+            <div class="time-stamps">
+                <span id="currentTime">0:00</span>
+                <span id="totalTime">3:42</span>
+            </div>
+        </div>
+
+        <!-- CONTROLS -->
+        <div class="controls">
+            <button id="prevBtn"><i class="fas fa-step-backward"></i></button>
+            <button class="play-btn" id="playBtn"><i class="fas fa-play"></i></button>
+            <button id="nextBtn"><i class="fas fa-step-forward"></i></button>
+        </div>
+
+        <!-- VOLUME + EXTRAS -->
+        <div class="bottom-bar">
+            <div class="volume-control">
+                <i class="fas fa-volume-up" id="volumeIcon"></i>
+                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.01" value="0.85" />
+            </div>
+            <div class="extra-actions">
+                <i class="fas fa-heart" id="likeIcon"></i>
+                <i class="fas fa-random" id="shuffleIcon"></i>
+                <i class="fas fa-redo-alt" id="loopIcon"></i>
+            </div>
+        </div>
+
+        <!-- PLAYLIST -->
+        <div class="playlist-section">
+            <div class="playlist-header">
+                <span><i class="fas fa-music"></i> PLAYLIST</span>
+                <span id="trackCount">4 tracks</span>
+            </div>
+            <div class="playlist-items" id="playlistContainer">
+                <!-- injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
